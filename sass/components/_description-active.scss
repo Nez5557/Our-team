@@ -1,0 +1,135 @@
+/* Описание */
+
+.our-work {
+  // text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: $title-text-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+}
+
+.job-description {
+  font-family: "Roboto", sans-serif;
+  color: $primary-text-color;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.broadcast {
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.broadcast-title {
+  background-color: $secondary-background-color;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mobale
+
+@media screen and (max-width: 767px) {
+  .our-work + .our-work {
+    margin-bottom: 10px;
+  }
+
+  .our-work {
+    text-align: center;
+  }
+
+  .broadcast + .broadcast {
+    margin-bottom: 30px;
+  }
+
+  .broadcast-title {
+    height: 120px;
+    display: flex;
+  }
+
+  .description-active {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+//Tablet
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  ul.page-header {
+    margin: -15px;
+  }
+
+  .our-work {
+    text-align: left;
+  }
+
+  .page-header {
+    display: flex;
+    flex-wrap: wrap;
+    // list-style: none;
+  }
+
+  .broadcast {
+    align-items: center;
+    justify-content: center;
+    flex-basis: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+
+  // .broadcast:nth-child(-n + 2) {
+  //  margin-top: 0;
+  // }
+  // .broadcast:nth-last-child(-n + 2) {
+  //   margin-bottom: 0;
+  // }
+
+  .broadcast-title {
+    width: 354px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .broadcast-icon {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .description-active {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+// Desctop
+
+@media screen and (min-width: 1200px) {
+  .description-active {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .broadcast-title {
+    width: 100%;
+    height: 120px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .broadcast {
+    align-items: center;
+    justify-content: center;
+    // flex-basis: calc((100% - 2 * 15px) / 4);
+    // margin: 15px;
+  }
+
+  .broadcast + .broadcast {
+    margin-left: 15px;
+  }
+}

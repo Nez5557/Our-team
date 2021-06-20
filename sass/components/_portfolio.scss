@@ -1,0 +1,240 @@
+/* Портфолио */
+
+.conteiner-portfolio {
+  align-items: center;
+}
+
+.hero-portfolio {
+  align-items: center;
+  text-align: center;
+}
+
+.button-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.button-list button:hover {
+  font-family: "Roboto", sans-serif;
+  color: $white-color;
+  background-color: $accent-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-list button:focus {
+  font-family: "Roboto", sans-serif;
+  color: $white-color;
+  background-color: $accent-color;
+  flex-direction: row;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-list button {
+  font-family: "Roboto", sans-serif;
+  background-color: $button-color;
+  color: $title-text-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0, 03em;
+  border-radius: 4px;
+  border: none;
+  letter-spacing: 0.03em;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 22px;
+  padding-left: 22px;
+}
+
+button {
+  display: inline-block;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: center;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-portfolio {
+  border: 1px solid #eeeeee;
+}
+
+.overlay-text {
+  background-color: rgba(33, 150, 243, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 63px 24px;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: $white-color;
+  margin: 0;
+  padding-left: 24px;
+}
+
+.portfolio-box:hover .overlay-text,
+.portfolio-box:focus .overlay-text {
+  transform: translateY(0);
+}
+
+.portfolio-box:hover,
+.portfolio-box:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.title-description {
+  padding: 24px;
+}
+
+.name-title {
+  color: $title-text-color;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0, 06em;
+  margin: 0;
+}
+
+.description-name {
+  color: $primary-text-color;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0, 03em;
+  margin: 0;
+}
+
+// Mobale
+
+@media screen and (max-width: 767px) {
+  .portfolio-title {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .button-list {
+    width: 362px;
+    height: 91px;
+    margin-bottom: 40px;
+    justify-content: left;
+  }
+
+  .image-portfolio {
+    // margin-left: 30px;
+    margin-bottom: 30px;
+    width: 450px;
+  }
+  .button-title:first-child {
+    margin-right: 7px;
+  }
+
+  .button-title:nth-child(even) {
+    margin-right: 7px;
+  }
+
+  .button-list button {
+    min-width: 73px;
+    max-width: 145px;
+    height: 38px;
+  }
+}
+
+//Tablet
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-title {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .button-list {
+    width: 611px;
+    height: 54px;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  button {
+    position: center;
+  }
+
+  .button-title:not(:last-child) {
+    margin-right: 7px;
+  }
+
+  .image-portfolio {
+    flex-basis: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+
+  .portfolio {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+// Desctop
+
+@media screen and (min-width: 1200px) {
+  .portfolio-title {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .button-list {
+    width: 611px;
+    height: 54px;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .button-title:not(:last-child) {
+    margin-right: 7px;
+  }
+
+  button {
+    position: center;
+  }
+
+  .portfolio {
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
+
+  .image-portfolio {
+    width: 370px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+}
