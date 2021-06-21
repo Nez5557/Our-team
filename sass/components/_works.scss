@@ -23,8 +23,9 @@
     font-size: 28px;
   }
 
-  .staff {
-    height: 162px;
+
+  .our-people{
+    padding: 0px;
   }
 }
 
@@ -55,20 +56,14 @@
     width: 354px;
   }
 
-  .our-people {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-  }
+
 
   .team {
     font-size: 28px;
     padding-bottom: 60px;
   }
 
-  .staff {
-    height: 162px;
-  }
+
 }
 
 // Desctop
@@ -134,14 +129,12 @@
     height: 428px;
   }
 
-  .staff {
-    height: 168px;
-  }
+ 
 }
 
 .description {
   font-family: "Roboto", sans-serif;
-  color: $title-text-color;
+
   font-weight: 700;
   letter-spacing: 0.03em;
   text-align: center;
@@ -183,7 +176,7 @@
 
 .profession {
   font-family: "Roboto", sans-serif;
-  background-color: $white-color;
+
   color: $primary-text-color;
   font-weight: 400;
   margin-bottom: 20px;
@@ -221,4 +214,35 @@
 
 .icon-list:not(:last-child) {
   margin-right: 10px;
+}
+  .our-people {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+     max-width: 100%;
+     
+  }
+  .box{
+    border-radius: 50px 0 50px 0;
+  }
+  .ourPeople{
+     border-radius: 50px 0 50px 0;
+     object-fit: cover;
+       transition: 1s;
+  }
+ .hidden-img{
+     border-radius: 50px 0 50px 0;
+     display: inline-block; /* Строчно-блочный элемент */
+    overflow: hidden;
+}
+
+.ourPeople:hover{
+ 
+transform: scale(1.15);
+}
+.description{
+  color: #ffffff;
 }
